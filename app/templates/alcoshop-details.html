@@ -45,13 +45,13 @@
                                 <iframe src={{ alcoshop.coordinate }} width="250" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
             <div class="mt-2">
-                <form action="{{ url_for('delete_shop', id=alcoshop.id) }}" class="btn btn-primary" method="post">
-                    <button>Remove</button>
+                <form action="{{ url_for('delete_shop', id=alcoshop.id) }}" method="post">
+                    <button class="btn btn-dark">Remove</button>
                 </form>
             </div>
             <div class="mt-2">
-                <form action="{{ url_for('alcoshop_edit', id=alcoshop.id) }}" class="btn btn-primary" method="post">
-                    <button type="button" class="btn btn-dark">Alcoshop Edit</button>
+                <form action="{{ url_for('alcoshop_edit', id=alcoshop.id) }}" method="post">
+                    <button class="btn btn-dark">Alcoshop Edit</button>
                 </form>
             </div>
         </div>

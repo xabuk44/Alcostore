@@ -35,12 +35,27 @@
     </form>
   </div>
 </nav>
+
 <form action="{{ url_for('save_edit', id=alcoshop.id) }}" method="post">
-    <input type="text", value="{{ alcoshop.name }}" name="name" placeholder="name" required>
-    <input type="text", value="{{ alcoshop.adress }}" name="adress" placeholder = "adress" required>
-    <input type="text", value="{{ alcoshop.coordinate }}" name="coordinate" placeholder="coordinate" required>
-    <input type="text", value="{{ alcoshop.rating }}" name="rating" placeholder="rating" required>
-    <button type="button" class="btn btn-dark">Save</button>
+  <div class="form-group">
+      <label for="name1">Enter alcoshops name</label>
+    <input type="text" class="form-control" id="name1" aria-describedby="nameHelp" value="{{ alcoshop.name }}" name="name" placeholder="name" required>
+  </div>
+
+      <div class="form-group">
+      <label for="address1">Enter address</label>
+        <input type="text" class="form-control" id="address1" aria-describedby="addressHelp" value="{{ alcoshop.adress }}" name="adress" placeholder = "adress" required>
+      <div class="form-group">
+          <label for="coordinate1">Enter coordinates</label>
+        <input type="text" class="form-control" id="coordinate1" aria-describedby="coordinateHelp" value="{{ alcoshop.coordinate }}" name="coordinate" placeholder="coordinate" required>
+      <small id="coordinateHelp" class="form-text text-muted">Google Navigation API link Required</small>
+      </div>
+          <div class="form-group">
+              <label for="rate1">Enter rating (1-5)</label>
+        <input type="text" class="form-control" id="rate1" aria-describedby="rateHelp" value="{{ alcoshop.rating }}" name="rating" placeholder="rating" required>
+    <button class="card-link">Save</button>
+  </div>
 </form>
+
 </body>
 </html>
