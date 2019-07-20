@@ -42,7 +42,7 @@
                                 <a href="{{ url_for('alcoshop_details', id=alcoshop.id) }}"><h5 class="card-title">{{alcoshop.name}}</h5></a>
                                 <p class="card-text">(Adress: {{alcoshop.adress}})</p>
                                 (Rating: {{alcoshop.rating}})
-                                <iframe src={{ alcoshop.coordinate }} width="300" height="175" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src={{ alcoshop.coordinate }} width="250" height="170" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
             <div class="mt-2">
                 <form action="{{ url_for('delete_shop', id=alcoshop.id) }}" class="btn btn-primary" method="post">
